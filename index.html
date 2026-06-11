@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adklop Marketing – Get a customized performance marketing strategy focused on leads, sales, and business growth. Start your risk-free 20-day trial today." />
+  <meta name="keywords" content="performance marketing, lead generation, sales growth, digital marketing, business growth, campaign optimization" />
+  <meta name="author" content="Adklop Marketing" />
+  <meta property="og:title" content="Adklop Marketing – From Clicks to Customers" />
+  <meta property="og:description" content="We drive real business growth with customized performance marketing strategies focused on leads, sales, and ROI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adklopmarketing.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adklop Marketing – From Clicks to Customers" />
+  <meta name="twitter:description" content="Customized performance marketing strategy focused on leads, sales, and business growth." />
+  <link rel="canonical" href="https://adklopmarketing.com" />
+  <title>Adklop Marketing – From Clicks to Customers</title>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Adklop Marketing",
+    "description": "Customized performance marketing strategy focused on leads, sales, and business growth.",
+    "email": "sudhinnaveen38@gmail.com",
+    "url": "https://adklopmarketing.com",
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #3B6DEA;
+      --blue-dark: #2f5dd4;
+      --green: #22c55e;
+      --red: #ef4444;
+      --text: #111111;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --light-bg: #f9fafb;
+      --border: #e5e7eb;
+      --red-light: #fff1f2;
+      --card-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px 5%;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a { font-size: 14px; font-weight: 400; color: var(--text); transition: color .2s; }
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a { font-size: 15px; font-weight: 500; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 72px 5% 60px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto 32px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+    /* ── FEATURE PILLS ── */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 48px 5%;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      flex: 1 1 240px;
+      max-width: 300px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+
+    .feature-card h3 { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      text-align: center;
+      padding: 48px 5% 8px;
+    }
+
+    .section-header h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; margin-bottom: 8px; }
+    .section-header p { font-size: 13px; color: var(--muted); max-width: 400px; margin: 0 auto; }
+
+    /* ── COMPARE TABLE ── */
+    .compare {
+      display: flex;
+      gap: 20px;
+      padding: 28px 5% 16px;
+      max-width: 860px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .compare-box {
+      flex: 1 1 300px;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 28px 32px;
+    }
+
+    .compare-box.no { background: var(--red-light); border-color: #fecdd3; }
+
+    .compare-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .compare-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .dot.green { background: var(--green); }
+    .dot.red { background: var(--red); }
+
+    /* ── CTA BLOCK ── */
+    .cta-block {
+      text-align: center;
+      padding: 32px 5% 48px;
+    }
+    .cta-block .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ── PROCESS ── */
+    .process-section {
+      padding: 12px 5% 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Mobile: single column, numbered steps */
+    .process-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 32px;
+    }
+
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-card {
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 22px 26px;
+      width: 100%;
+    }
+
+    .process-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .process-card p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+    .step-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6px 0;
+      color: var(--muted);
+    }
+    .step-connector .line {
+      border-left: 2px dashed #bbb;
+      height: 28px;
+    }
+    .step-connector .arrow-tip { font-size: 16px; line-height: 1; }
+
+    /* Desktop: 2-column Z-pattern grid */
+    @media (min-width: 769px) {
+      .process-grid {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        grid-template-rows: auto 40px auto;
+        gap: 0;
+        align-items: center;
+      }
+
+      /* hide mobile connectors on desktop */
+      .step-connector { display: none; }
+
+      .process-step { display: contents; }
+
+      .process-card.step1 { grid-column: 1; grid-row: 1; }
+      .process-card.step2 { grid-column: 3; grid-row: 1; }
+      .process-card.step3 { grid-column: 3; grid-row: 3; }
+      .process-card.step4 { grid-column: 1; grid-row: 3; }
+
+      /* horizontal arrow col1→col3 */
+      .desktop-arrow-right {
+        grid-column: 2; grid-row: 1;
+        display: flex; align-items: center; justify-content: center;
+      }
+      /* vertical arrow on right col2→row3 */
+      .desktop-arrow-down {
+        grid-column: 3; grid-row: 2;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+      }
+      /* horizontal arrow col3→col1 */
+      .desktop-arrow-left {
+        grid-column: 2; grid-row: 3;
+        display: flex; align-items: center; justify-content: center;
+      }
+
+      .darrow-h { display: flex; align-items: center; }
+      .darrow-h .dline { border-top: 2px dashed #bbb; width: 44px; }
+      .darrow-h .dtip  { font-size: 16px; color: var(--muted); }
+
+      .darrow-v { display: flex; flex-direction: column; align-items: center; }
+      .darrow-v .dline { border-left: 2px dashed #bbb; height: 34px; }
+      .darrow-v .dtip  { font-size: 16px; color: var(--muted); }
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: 48px 5%;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 18px 20px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text);
+      transition: background .15s;
+    }
+    .faq-question:hover { background: var(--light-bg); }
+
+    .faq-icon {
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--muted);
+      transition: transform .3s;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .3s;
+      padding: 0 20px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 20px 18px;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--light-bg);
+      text-align: center;
+      padding: 80px 5%;
+    }
+    .final-cta h2 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+    .final-cta .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand .logo { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .footer-brand p { font-size: 12px; color: var(--muted); max-width: 240px; line-height: 1.6; }
+
+    .footer-right { text-align: right; font-size: 13px; }
+    .footer-right a { color: var(--muted); font-size: 12px; }
+    .footer-right a:hover { color: var(--blue); }
+    .footer-right p { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { justify-content: space-between; padding: 16px 5%; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-logo { font-size: 16px; }
+
+      .features { gap: 14px; }
+      .feature-card { max-width: 100%; }
+
+      .compare { flex-direction: column; }
+
+      .desktop-arrow-right,
+      .desktop-arrow-down,
+      .desktop-arrow-left { display: none; }
+
+      .footer-right { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 48px 5% 40px; }
+      .hero h1 { font-size: 28px; }
+    }
+
+    /* ── MODAL OVERLAY ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(3px);
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 36px 36px;
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+      animation: modalIn .25s ease;
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(24px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 18px;
+      background: var(--light-bg);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .15s, color .15s;
+    }
+    .modal-close:hover { background: var(--border); color: var(--text); }
+
+    .modal h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .modal .modal-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .field-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .field-group input,
+    .field-group textarea {
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .field-group input:focus,
+    .field-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59,109,234,0.12);
+    }
+    .field-group input.error,
+    .field-group textarea.error {
+      border-color: var(--red);
+    }
+
+    .field-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .modal .btn-send {
+      width: 100%;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .modal .btn-send:hover:not(:disabled) { background: var(--blue-dark); transform: translateY(-1px); }
+    .modal .btn-send:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+
+    .modal-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0 8px;
+    }
+    .modal-success .success-icon {
+      width: 60px; height: 60px;
+      background: #dcfce7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 16px;
+    }
+    .modal-success h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .modal-success p { font-size: 13px; color: var(--muted); }
+
+    .form-error-msg {
+      font-size: 11px;
+      color: var(--red);
+      margin-top: 4px;
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .modal { padding: 32px 20px 24px; }
+      .modal h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-logo" aria-label="Adklop Marketing">Adklop<br>Marketing</div>
+      <div class="nav-links">
+        <a href="#how-we-work">How we works</a>
+        <a href="#faq">FAQS</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#how-we-work">How we works</a>
+      <a href="#faq">FAQS</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="about" aria-labelledby="heroHeading">
+      <h1 id="heroHeading">From Clicks to Customers—We Drive Real Business Growth.</h1>
+      <p>Get a customized performance marketing strategy focused on leads, sales, and business growth.</p>
+      <button class="btn-primary" onclick="openModal()">Start Your 20-Days Trial</button>
+    </section>
+
+    <!-- FEATURE CARDS -->
+    <section class="features" aria-label="Key benefits">
+      <article class="feature-card">
+        <h3>Result driven Approach</h3>
+        <p>I focus on measurable business outcomes like leads, sales, and revenue—not just clicks, likes, or impressions.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Risk-Free 20-Day Trial</h3>
+        <p>Experience my service for 20 days and evaluate the results before making a long-term commitment.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Personalized Growth Strategy</h3>
+        <p>Every business is different. I create custom marketing strategies tailored to your goals, audience, and budget to maximize ROI.</p>
+      </article>
+    </section>
+
+    <!-- WHAT MAKES IT DIFFERENT -->
+    <section class="section-header" id="how-we-work">
+      <h2>What Makes My Service Different?</h2>
+      <p>No guesswork. No hidden fees. Just proven strategies focused on real business results.</p>
+    </section>
+
+    <!-- COMPARE -->
+    <div class="compare" role="region" aria-label="Service comparison">
+      <div class="compare-box yes">
+        <h3>What you get?</h3>
+        <div class="compare-item"><div class="dot green"></div><span>Performance Marketing Strategy</span></div>
+        <div class="compare-item"><div class="dot green"></div><span>Lead, Sales, Traffic &amp; Awareness Campaigns</span></div>
+        <div class="compare-item"><div class="dot green"></div><span>Regular Performance Reports</span></div>
+        <div class="compare-item"><div class="dot green"></div><span>Campaign Optimization</span></div>
+        <div class="compare-item"><div class="dot green"></div><span>Direct Communication &amp; Support</span></div>
+      </div>
+      <div class="compare-box no">
+        <h3>What you Don't get?</h3>
+        <div class="compare-item"><div class="dot red"></div><span>Vanity Metrics</span></div>
+        <div class="compare-item"><div class="dot red"></div><span>One-Size-Fits-All Strategies</span></div>
+        <div class="compare-item"><div class="dot red"></div><span>Hidden Fees or Surprises</span></div>
+        <div class="compare-item"><div class="dot red"></div><span>Empty Promises</span></div>
+      </div>
+    </div>
+
+    <!-- CTA 1 -->
+    <div class="cta-block">
+      <button class="btn-primary" onclick="openModal()">Get Started</button>
+      <p class="label">GROW YOUR BUSINESS</p>
+    </div>
+
+    <!-- HOW WE DRIVE RESULTS -->
+    <section class="section-header">
+      <h2>How We Drive Results</h2>
+      <p>No guesswork. No shortcuts. Just a proven process built around your business goals.</p>
+    </section>
+
+    <div class="process-section" role="region" aria-label="Our process">
+      <div class="process-grid">
+
+        <!-- Step 1 -->
+        <div class="process-step">
+          <article class="process-card step1">
+            <h3>1. 🔍 Discovery</h3>
+            <p>We understand your business, goals, target audience, competitors, and growth opportunities.</p>
+          </article>
+          <div class="step-connector" aria-hidden="true">
+            <div class="line"></div>
+            <div class="arrow-tip">↓</div>
+          </div>
+        </div>
+
+        <!-- Desktop arrow right (step1 → step2) -->
+        <div class="desktop-arrow-right" aria-hidden="true">
+          <div class="darrow-h"><div class="dline"></div><div class="dtip">➜</div></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <article class="process-card step2">
+            <h3>2. ⚙️ Campaign Setup</h3>
+            <p>We build the foundation for success with audience research, tracking setup, ad creatives, and campaign structure.</p>
+          </article>
+          <div class="step-connector" aria-hidden="true">
+            <div class="line"></div>
+            <div class="arrow-tip">↓</div>
+          </div>
+        </div>
+
+        <!-- Desktop arrow down (step2 → step3) -->
+        <div class="desktop-arrow-down" aria-hidden="true">
+          <div class="darrow-v"><div class="dline"></div><div class="dtip">↓</div></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <article class="process-card step3">
+            <h3>3. 🚀 Launch &amp; Optimization</h3>
+            <p>Campaigns go live, and we continuously monitor, test, and optimize to improve performance and maximize ROI.</p>
+          </article>
+          <div class="step-connector" aria-hidden="true">
+            <div class="line"></div>
+            <div class="arrow-tip">↓</div>
+          </div>
+        </div>
+
+        <!-- Desktop arrow left (step3 → step4) -->
+        <div class="desktop-arrow-left" aria-hidden="true">
+          <div class="darrow-h"><div class="dtip">←</div><div class="dline"></div></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step">
+          <article class="process-card step4">
+            <h3>4. 📊 Reporting &amp; Scaling</h3>
+            <p>Receive transparent performance reports and actionable insights while we scale the strategies that deliver the best results.</p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA 2 -->
+    <div class="cta-block">
+      <button class="btn-primary" onclick="openModal()">Get Started</button>
+      <p class="label">GROW YOUR BUSINESS</p>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq" aria-labelledby="faqHeading">
+      <div class="section-header" style="padding: 0 0 24px;">
+        <h2 id="faqHeading">FAQS</h2>
+        <p>Everything you need to know about our service.</p>
+      </div>
+
+      <div class="faq-item open">
+        <button class="faq-question" aria-expanded="true">
+          How Does the 20-Day Trial Work?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          You can experience my service for the first 20 days before making a long-term commitment. During this period, I work on understanding your business, setting up campaigns, and optimizing performance. At the end of the trial, you can evaluate the value and results before deciding to continue.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do You Guarantee Results?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          While no marketer can guarantee specific results due to the nature of digital advertising, I focus entirely on measurable business outcomes. I use data-driven strategies and continuously optimize campaigns to maximize performance and deliver real growth.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Will I Receive Performance Reports?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes! You'll receive regular, transparent performance reports that break down exactly what's working, what's been tested, and what actions are being taken. No jargon — just clear, actionable insights.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How Long Does It Take to See Results?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Most clients begin to see meaningful data and early results within the first 20-day trial period. Significant business growth typically unfolds over 60–90 days as campaigns are refined, audiences are optimized, and strategies are scaled.
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact" aria-labelledby="finalCtaHeading">
+      <h2 id="finalCtaHeading">Want to scale your business?</h2>
+      <button class="btn-primary" onclick="openModal()">Get Started</button>
+      <p class="label">GROW YOUR BUSINESS</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <div class="logo">Adklop<br>Marketing</div>
+      <p>Get a customized performance marketing strategy focused on leads, sales, and business growth.</p>
+    </div>
+    <div class="footer-right">
+      <p>sudhinnaveen38@gmail.com</p>
+      <a href="#">Terms &amp; Conditions</a>
+      <p>© 2026 All Right Are Received</p>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+      <!-- Form view -->
+      <div id="modalFormView">
+        <h2 id="modalTitle">Let's Grow Your Business</h2>
+        <p class="modal-sub">Fill in your details and I'll get back to you within 24 hours.</p>
+
+        <div class="field-group">
+          <div>
+            <label for="inputName">Your Name</label>
+            <input type="text" id="inputName" placeholder="e.g. Ravi Kumar" autocomplete="name" />
+            <p class="form-error-msg" id="errName">Please enter your name.</p>
+          </div>
+          <div>
+            <label for="inputPhone">Phone Number</label>
+            <input type="tel" id="inputPhone" placeholder="e.g. +91 98765 43210" autocomplete="tel" />
+            <p class="form-error-msg" id="errPhone">Please enter a valid phone number.</p>
+          </div>
+          <div>
+            <label for="inputHelp">How Can I Help You?</label>
+            <textarea id="inputHelp" placeholder="Tell me about your business goals, current challenges, or what you'd like to achieve..."></textarea>
+            <p class="form-error-msg" id="errHelp">Please describe how I can help you.</p>
+          </div>
+        </div>
+
+        <button class="btn-send" id="btnSend">
+          <span id="btnSendText">Send Message</span>
+          <span id="btnSendSpinner" style="display:none;">Sending…</span>
+        </button>
+
+        <p id="sendErrorMsg" style="display:none; color:var(--red); font-size:12px; text-align:center; margin-top:12px;">
+          Something went wrong. Please try again or email directly at adklopemail@gmail.com
+        </p>
+      </div>
+
+      <!-- Success view -->
+      <div class="modal-success" id="modalSuccessView">
+        <div class="success-icon">✅</div>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Web3Forms ──
+    // HOW TO ACTIVATE (one-time, 2 minutes):
+    // 1. Go to https://web3forms.com
+    // 2. Enter adklopemail@gmail.com → click "Create Access Key"
+    // 3. Check your inbox for the key and paste it below
+    const WEB3FORMS_ACCESS_KEY = "f213fb94-5b43-4114-8ec0-527ea632f236";
+
+    // ── Modal helpers ──
+    function openModal() {
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('inputName').focus();
+      resetForm();
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function resetForm() {
+      ['inputName','inputPhone','inputHelp'].forEach(id => {
+        const el = document.getElementById(id);
+        el.value = '';
+        el.classList.remove('error');
+      });
+      ['errName','errPhone','errHelp'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+      document.getElementById('sendErrorMsg').style.display = 'none';
+      document.getElementById('modalFormView').style.display = 'block';
+      document.getElementById('modalSuccessView').style.display = 'none';
+      setBtnState(false);
+    }
+
+    function setBtnState(loading) {
+      const btn = document.getElementById('btnSend');
+      btn.disabled = loading;
+      document.getElementById('btnSendText').style.display    = loading ? 'none'  : 'inline';
+      document.getElementById('btnSendSpinner').style.display = loading ? 'inline': 'none';
+    }
+
+    // ── Validation ──
+    function validate() {
+      let ok = true;
+      const name  = document.getElementById('inputName').value.trim();
+      const phone = document.getElementById('inputPhone').value.trim();
+      const help  = document.getElementById('inputHelp').value.trim();
+
+      function setErr(inputId, errId, show) {
+        document.getElementById(inputId).classList.toggle('error', show);
+        document.getElementById(errId).style.display = show ? 'block' : 'none';
+      }
+
+      if (!name)  { setErr('inputName',  'errName',  true); ok = false; }
+      else          setErr('inputName',  'errName',  false);
+
+      if (!phone || !/^[\d\s\+\-\(\)]{7,15}$/.test(phone)) {
+        setErr('inputPhone', 'errPhone', true); ok = false;
+      } else setErr('inputPhone', 'errPhone', false);
+
+      if (!help)  { setErr('inputHelp',  'errHelp',  true); ok = false; }
+      else          setErr('inputHelp',  'errHelp',  false);
+
+      return ok;
+    }
+
+    // ── Send via Web3Forms ──
+    document.getElementById('btnSend').addEventListener('click', async () => {
+      if (!validate()) return;
+      setBtnState(true);
+      document.getElementById('sendErrorMsg').style.display = 'none';
+
+      const payload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name:    document.getElementById('inputName').value.trim(),
+        phone:   document.getElementById('inputPhone').value.trim(),
+        message: document.getElementById('inputHelp').value.trim(),
+        subject: "New Lead from Adklop Marketing Website",
+        from_name: "Adklop Marketing Website"
+      };
+
+      try {
+        const res  = await fetch("https://api.web3forms.com/submit", {
+          method:  "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body:    JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('modalFormView').style.display   = 'none';
+          document.getElementById('modalSuccessView').style.display = 'block';
+        } else {
+          throw new Error(data.message || "Submission failed");
+        }
+      } catch (err) {
+        console.error('Web3Forms error:', err);
+        document.getElementById('sendErrorMsg').style.display = 'block';
+        setBtnState(false);
+      }
+    });
+
+    // ── Close triggers ──
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    document.getElementById('modalOverlay').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // ── Mobile menu toggle ──
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
