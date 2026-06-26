@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adklop Marketing – Our Works. Browse our social media creatives and campaign designs built to drive real business results." />
+  <meta name="keywords" content="social media creatives, ad campaigns, digital marketing portfolio, Adklop Marketing" />
+  <meta name="author" content="Adklop Marketing" />
+  <meta property="og:title" content="Our Works – Adklop Marketing" />
+  <meta property="og:description" content="Browse social media creatives and campaign designs that drive real business results." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://adklopmarketing.com/our-works.html" />
+  <title>Our Works – Adklop Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #3B6DEA;
+      --blue-dark: #2f5dd4;
+      --text: #111111;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --light-bg: #f9fafb;
+      --border: #e5e7eb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px 5%;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a { font-size: 14px; font-weight: 400; color: var(--text); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--blue); font-weight: 600; }
+
+    .nav-logo { font-size: 18px; font-weight: 800; text-align: center; line-height: 1.2; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a { font-size: 15px; font-weight: 500; }
+    .mobile-menu a.active { color: var(--blue); font-weight: 600; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      text-align: center;
+      padding: 60px 5% 40px;
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .tag {
+      display: inline-block;
+      background: #e0e8ff;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .page-hero h1 {
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 32px 5% 24px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .filter-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ── GRID ── */
+    .works-section {
+      padding: 0 5% 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* card */
+    .work-card {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      transition: transform .25s, box-shadow .25s;
+      cursor: pointer;
+    }
+    .work-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    /* image slot */
+    .work-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #f3f4f6;
+    }
+
+    /* placeholder shown when no real image */
+    .work-img-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #e0e8ff 0%, #f3f4f6 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+    }
+    .work-img-placeholder .ph-icon { font-size: 36px; }
+    .work-img-placeholder .ph-text { font-size: 12px; font-weight: 500; }
+
+    .work-info {
+      padding: 14px 16px 16px;
+    }
+    .work-info .work-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .work-info h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .work-info p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .lightbox.open { display: flex; }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: 560px;
+      width: 100%;
+      background: var(--bg);
+      border-radius: 18px;
+      overflow: hidden;
+      animation: lbIn .22s ease;
+    }
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .lightbox-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #f3f4f6;
+    }
+
+    .lightbox-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #e0e8ff 0%, #f3f4f6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .lightbox-body {
+      padding: 20px 22px 22px;
+    }
+    .lightbox-body .lb-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .lightbox-body h2 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .lightbox-body p  { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    .lightbox-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: rgba(0,0,0,0.45);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .15s;
+    }
+    .lightbox-close:hover { background: rgba(0,0,0,0.7); }
+
+    /* prev / next */
+    .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 50%;
+      width: 36px; height: 36px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background .15s;
+      z-index: 10;
+    }
+    .lb-nav:hover { background: #fff; }
+    .lb-prev { left: -48px; }
+    .lb-next { right: -48px; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--light-bg);
+      text-align: center;
+      padding: 64px 5%;
+      border-top: 1px solid var(--border);
+    }
+    .cta-strip h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 800; margin-bottom: 10px; }
+    .cta-strip p  { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 36px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+      
+    }
+    .footer-brand .logo { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .footer-brand p { font-size: 12px; color: var(--muted); max-width: 240px; line-height: 1.6; }
+    .footer-right { text-align: right; }
+    .footer-right a { color: var(--muted); font-size: 12px; }
+    .footer-right a:hover { color: var(--blue); }
+    .footer-right p { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+
+    /*---- our work image -----*/
+    .ourworkimageclass{
+      width: 320px;
+      height: 500px;
+      border-radius: 10px;
+      object-fit:fill;
+    }
+    .gridofourwork{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+    }
+    .fullworksectiondivv{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      bottom: 50px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { justify-content: space-between; padding: 16px 5%; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-logo { font-size: 16px; }
+
+      .works-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+      .lb-prev { left: -4px; }
+      .lb-next { right: -4px; }
+
+      .footer-right { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .works-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 40px 5% 28px; }
+
+       .ourworkimageclass{
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      object-fit:fill;
+    }
+    .gridofourwork{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .fullworksectiondivv{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      bottom: 50px;
+    }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-logo"><a href="index.html"></a>Adklop<br>Marketing</div>
+      <div class="nav-links">
+        <a href="index.html#how-we-work">How we works</a>
+        <a href="our-works.html" class="active">Our Works</a>
+        <a href="index.html#faq">FAQS</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#how-we-work">How we works</a>
+      <a href="our-works.html" class="active">Our Works</a>
+      <a href="index.html#faq">FAQS</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="tag">Portfolio</div>
+      <h1>Our Works</h1>
+      <p>Social media creatives and ad campaigns built to drive real engagement and business growth.</p>
+    </section>
+
+   <div class="fullworksectiondivv">
+    <div class="firstrow gridofourwork">
+      <img src="./poster 1.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 2.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 3.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+    </div>
+    <div class="firstrow gridofourwork">
+      <img src="./poster 4.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 5.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 6.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+    </div>
+    <div class="firstrow gridofourwork">
+      <img src="./poster 7.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 8.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+      <img src="./poster 9.png" alt="adklopmarketing ad creative" class="ourworkimageclass">
+    </div>
+   </div>
+
+   
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <div class="logo">Adklop<br>Marketing</div>
+      <p>Get a customized performance marketing strategy focused on leads, sales, and business growth.</p>
+    </div>
+    <div class="footer-right">
+      <p>adklopemail@gmail.com</p>
+      <a href="#">Terms &amp; Conditions</a>
+      <p>© 2026 All Right Are Received</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Mobile menu ──
+    document.getElementById('hamburgerBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    document.querySelectorAll('#mobileMenu a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+    });
+
+    // ── Filter ──
+    const cards = Array.from(document.querySelectorAll('.work-card'));
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ── Lightbox ──
+    let currentIndex = 0;
+    const visibleCards = () => cards.filter(c => c.style.display !== 'none');
+
+    function openLightbox(card) {
+      currentIndex = cards.indexOf(card);
+      renderLightbox(card);
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderLightbox(card) {
+      // image or placeholder
+      const img = card.querySelector('img.work-img');
+      const wrap = document.getElementById('lbImageWrap');
+      if (img) {
+        wrap.innerHTML = `<img src="${img.src}" alt="${img.alt}" class="lightbox-img" />`;
+      } else {
+        const icon = card.querySelector('.ph-icon').textContent;
+        wrap.innerHTML = `<div class="lightbox-placeholder">${icon}</div>`;
+      }
+      document.getElementById('lbTag').textContent   = card.dataset.tag;
+      document.getElementById('lbTitle').textContent = card.dataset.title;
+      document.getElementById('lbDesc').textContent  = card.dataset.desc;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    cards.forEach(card => card.addEventListener('click', () => openLightbox(card)));
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    });
+
+    document.getElementById('lbPrev').addEventListener('click', e => {
+      e.stopPropagation();
+      const vis = visibleCards();
+      const idx = vis.findIndex(c => cards.indexOf(c) === currentIndex);
+      const prev = vis[(idx - 1 + vis.length) % vis.length];
+      currentIndex = cards.indexOf(prev);
+      renderLightbox(prev);
+    });
+
+    document.getElementById('lbNext').addEventListener('click', e => {
+      e.stopPropagation();
+      const vis = visibleCards();
+      const idx = vis.findIndex(c => cards.indexOf(c) === currentIndex);
+      const next = vis[(idx + 1) % vis.length];
+      currentIndex = cards.indexOf(next);
+      renderLightbox(next);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft')  document.getElementById('lbPrev').click();
+      if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+    });
+  </script>
+</body>
+</html>
