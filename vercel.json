@@ -1,8 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/our-work",
+      "source": "/our-work|adklopmarketing",
       "destination": "/our-works.html"
+    },
+    {
+      "source": "/Blogs|adklop marketing",
+      "destination": "/Blogs.html"
+    },
+    {
+      "source": "/Blogs|4ps-of-marketing|adklop marketing",
+      "destination": "/Blogs/4ps_of_marketing/4ps-of-marketing.html"
     }
   ]
 }

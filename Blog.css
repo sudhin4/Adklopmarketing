@@ -251,3 +251,12 @@ nav {
     padding: 0;
 }
 
+.mainsectionforblogposts{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+h2:hover{
+    text-decoration: underline;
+}
