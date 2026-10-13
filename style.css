@@ -472,6 +472,263 @@ h3 {
 
 
 
+/* ==================================
+   ADKLOP WORK SECTION
+================================== */
+
+.adklop-work {
+    width: 100%;
+    padding: 100px 0;
+    background: #f5f5f3;
+    overflow: hidden;
+}
+
+
+/* HEADING */
+
+.work-heading {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.work-label {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+.work-heading h2 {
+    margin: 0;
+
+    font-size: clamp(48px, 5.5vw, 85px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+
+    font-weight: 800;
+    color: #080808;
+}
+
+.work-subtitle {
+    max-width: 580px;
+    margin: 25px auto 0;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ==================================
+   CAROUSEL
+================================== */
+
+.work-carousel {
+    width: 100%;
+}
+
+
+/* EACH ROW */
+
+.work-row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.work-row + .work-row {
+    margin-top: 14px;
+}
+
+
+/* MOVING TRACK */
+
+.work-track {
+    display: flex;
+    width: max-content;
+
+    will-change: transform;
+}
+
+
+/* EACH 7-POSTER SET */
+
+.work-set {
+    display: flex;
+    flex-shrink: 0;
+
+    gap: 14px;
+    padding-right: 14px;
+}
+
+
+/* POSTER SIZE */
+
+.work-set img {
+    /*
+       Approximately 7 cards across desktop.
+       Change 14px if you want bigger/smaller cards.
+    */
+
+    width: calc((100vw - 84px) / 7);
+    max-width: 260px;
+    min-width: 190px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+    flex-shrink: 0;
+
+    border-radius: 5px;
+    
+}
+
+
+/* ==================================
+   ROW 1 - MOVE LEFT
+================================== */
+
+.work-track-left {
+    animation: workMoveLeft 35s linear infinite;
+}
+
+@keyframes workMoveLeft {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ==================================
+   ROW 2 - MOVE RIGHT
+================================== */
+
+.work-track-right {
+    animation: workMoveRight 38s linear infinite;
+}
+
+@keyframes workMoveRight {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* PAUSE ON HOVER */
+
+.work-row:hover .work-track {
+    animation-play-state: paused;
+}
+
+
+/* MOBILE VERSION HIDDEN ON DESKTOP */
+
+.work-mobile-grid {
+    display: none;
+}
+
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 600px) {
+
+    .adklop-work {
+        padding: 65px 12px;
+    }
+
+
+    /* HEADING */
+
+    .work-heading {
+        padding: 0;
+        margin-bottom: 35px;
+    }
+
+    .work-label {
+        font-size: 10px;
+    }
+
+    .work-heading h2 {
+        font-size: 38px;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .work-subtitle {
+        max-width: 330px;
+
+        margin-top: 18px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* REMOVE AUTO CAROUSEL */
+
+    .work-carousel {
+        display: none;
+    }
+
+
+    /* 2 POSTERS PER ROW */
+
+    .work-mobile-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        width: 100%;
+    }
+
+
+    .work-mobile-grid img {
+        width: 100%;
+        height: auto;
+
+        display: block;
+
+        border-radius: 8px;
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .work-track {
+        animation: none;
+    }
+
+}
+
+
+
 .cards {
 
     grid-template-columns: repeat(3, 1fr);
